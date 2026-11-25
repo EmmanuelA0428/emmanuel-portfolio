@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Emmanuel Appiah — software engineer and data analyst building data pipelines, interactive dashboards, GIS tools, and software for nonprofits and community organizations.">
+  <meta name="description" content="Emmanuel Appiah — software engineer and data analyst building reliable software, data pipelines, interactive dashboards, and GIS tools for nonprofits and community organizations.">
   <meta name="author" content="Emmanuel Appiah">
-  <meta property="og:title" content="Emmanuel Appiah — Software Engineer &amp; Data Analytics">
-  <meta property="og:description" content="Data engineering, environmental analytics, GIS, and interactive dashboards for community and nonprofit organizations.">
+  <meta property="og:title" content="Emmanuel Appiah — Software Engineer &amp; Data Analyst">
+  <meta property="og:description" content="Reliable software, automated data pipelines, and interactive dashboards for community and nonprofit organizations.">
   <meta property="og:type" content="website">
-  <title>Emmanuel Appiah — Software Engineer &amp; Data Analytics</title>
+  <title>Emmanuel Appiah — Software Engineer &amp; Data Analyst</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,22 +44,22 @@
   <main id="main">
     <header class="hero section">
       <h1>Emmanuel Appiah</h1>
-      <p class="title">Software Engineer &amp; Data Analytics</p>
+      <p class="title">Software Engineer &amp; Data Analyst</p>
       <p class="availability">Available for contract opportunities</p>
       <p class="lede">
-        I build data infrastructure, interactive dashboards, geospatial applications, and software solutions
-        that help organizations turn complex data into accessible and actionable information.
+        I build reliable software, automated data pipelines, and interactive dashboards that help organizations
+        make sense of complex data.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">Explore Projects</a>
-        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+        <a class="btn btn-secondary" href="#contact">Discuss a Project</a>
       </div>
     </header>
 
     <section class="section" id="projects" aria-labelledby="projects-heading">
       <h2 class="section-title" id="projects-heading">Projects</h2>
       <p class="section-intro">
-        End-to-end work across environmental monitoring, community data platforms, desktop software, and GIS.
+        Selected work in data engineering, interactive dashboards, desktop software, and GIS.
       </p>
 
       <div class="project-featured">
@@ -70,8 +70,8 @@
             <p class="project-org">BluePrint Geneva</p>
             <h3><a href="#project-geneva-aq">Geneva Community Air Quality Dashboard</a></h3>
             <p class="project-summary">
-              An end-to-end community air quality monitoring platform that collects, processes, analyzes, and
-              visualizes environmental sensor data for residents and advocates.
+              A community air quality platform that collects and processes environmental sensor data, then presents maps,
+              trends, and air quality information for residents and advocates.
             </p>
             <div class="tags">
               <span class="tag">Python</span>
@@ -89,25 +89,27 @@
             <div class="case-study-inner">
               <h4>Problem</h4>
               <p>
-                Six community RAMP sensors produced minute-level readings, but data lived in a vendor portal, which was inaccessible to the public.
+                Six community RAMP sensors produced minute-level readings, but data lived in a vendor portal that was
+                inaccessible to the public.
               </p>
-              <h4>Solution</h4>
+              <h4>What I Built</h4>
               <p>
-                Built an automated cloud pipeline and a public Shiny dashboard that translate sensor readings into
-                EPA AQI categories, maps, trends, freshness indicators, and honest communication of coverage limits.
+                An automated ingestion pipeline and a public Shiny dashboard that present sensor readings as EPA AQI
+                categories, maps, trends, freshness indicators, and clear notes on coverage limits—aimed at community
+                communication, not regulatory-grade measurements.
               </p>
-              <h4>Implementation</h4>
+              <h4>Technical Approach</h4>
               <ul>
                 <li>Integrated six Sensit RAMP sensors through the Sensit Connect API.</li>
-                <li>Developed automated ETL on Google Cloud (Scheduler → Pub/Sub → Cloud Function → BigQuery).</li>
-                <li>Applied validation, completeness thresholds, temporal aggregation, and AQI calculations.</li>
-                <li>Deployed an interactive public dashboard (maps, trends, sensor health) on Cloud Run.</li>
-                <li>Infrastructure supports roughly 3.15 million potential sensor records per year (six sensors, one reading per minute).</li>
+                <li>Automated ETL on Google Cloud: Cloud Scheduler → Pub/Sub → Cloud Function → BigQuery.</li>
+                <li>Validation, completeness thresholds, temporal aggregation, and AQI calculations before visualization.</li>
+                <li>Interactive public dashboard (maps, trends, sensor health) deployed on Cloud Run.</li>
               </ul>
-              <h4>Outcomes</h4>
+              <h4>Status &amp; Results</h4>
               <p>
-                Presented the dashboard at the Air Sensors International Conference (Los Angeles, May 2026).
-                Dashboard emphasizes accessibility and uncertainty, not regulatory-grade certainty.
+                Public demo dashboard is deployed (see live demo link). Presented the work as a poster at the Air Sensors
+                International Conference, Los Angeles, May 2026. The interface emphasizes accessibility and uncertainty—not
+                regulatory-grade certainty.
               </p>
             </div>
           </details>
@@ -119,8 +121,8 @@
             <p class="project-org">Hobart and William Smith Colleges · Center for Teaching and Learning</p>
             <h3><a href="#project-accommodated-testing">Accommodated Exam Testing</a></h3>
             <p class="project-summary">
-              A Windows desktop application that unifies exam setup, accessibility tools, testing controls, and document
-              recovery into one guided workflow for accommodated testing laptops.
+              A Windows desktop application that guides staff and students through exam setup, approved accessibility tools,
+              testing, and document recovery.
             </p>
             <div class="tags">
               <span class="tag">C#</span>
@@ -129,7 +131,7 @@
               <span class="tag">Word automation</span>
             </div>
             <p class="project-summary" style="margin-top:0.75rem;font-size:0.875rem;">
-              <strong>Status:</strong> Beta / pilot validation.
+              <strong>Status:</strong> Beta / pilot validation
             </p>
           </div>
           <details class="case-study case-study--featured">
@@ -137,50 +139,41 @@
             <div class="case-study-inner">
               <h4>Problem</h4>
               <p>
-                Staff prepared testing laptops individually, moving exam documents from USB drives, disabling Wi‑Fi, saving
-                completed work, and clearing Word history between students. Existing helper tools handled isolated tasks,
-                but the overall process still depended on staff coordinating each step manually.
+                Staff prepared testing laptops step by step—USB exam files, Wi‑Fi changes, saves, and clearing Word history
+                between students. Helper tools covered individual tasks, but staff still coordinated the full sequence manually.
               </p>
-              <p>I focused on three challenges:</p>
+              <h4>What I Built</h4>
+              <p>
+                A Windows desktop application that supports accommodated testing from setup through export and machine
+                restoration. Primary workflow: offline Microsoft Word exams. Supported workflow: online exams in Microsoft Edge
+                (Canvas, Posit).
+              </p>
+              <h4>Technical Approach</h4>
+              <p><strong>Accessibility</strong></p>
+              <p>
+                Integrates approved Windows dictation (Voice Access) and text-to-speech for selected text. Staff configure
+                approved supports during setup; students access them during the exam.
+              </p>
+              <p><strong>Session workflow and recovery</strong></p>
               <ul>
-                <li><strong>Accessibility:</strong> Students needed straightforward access to approved speech-to-text and text-to-speech tools within their exam workflow.</li>
-                <li><strong>Staff workload:</strong> Repeated setup, file handling, and reset tasks made preparing each laptop cumbersome.</li>
-                <li><strong>Testing controls:</strong> Staff needed a more consistent way to limit access to unrelated resources while keeping necessary accessibility tools available.</li>
+                <li>Managed sessions: preparation, document import, testing, staff review, export, restoration.</li>
+                <li>Word automation for document operations; a privileged background service applies approved settings.</li>
+                <li>Automatic Word saves, rolling recovery copies, a Finish checkpoint, file-hash checks on export, and a recovery path before the next session.</li>
               </ul>
-              <h4>Solution</h4>
+              <p><strong>Testing controls</strong></p>
               <p>
-                I developed a Windows desktop application that brings exam setup, accessibility tools, testing controls, and
-                document recovery into one guided workflow. It supports offline Microsoft Word exams as the primary use case,
-                alongside online exams in Microsoft Edge for Canvas and Posit.
-              </p>
-              <h4>How I tackled each challenge</h4>
-              <p><strong>1. Put accessibility within reach</strong></p>
-              <p>
-                I brought Windows accessibility tools into the testing workflow: Windows Voice Access for dictation and Windows
-                speech synthesis for reading selected text aloud. Staff select the student’s approved supports during setup, and
-                student controls provide access during the exam.
-              </p>
-              <p><strong>2. Replace disconnected steps with a guided session</strong></p>
-              <p>
-                I organized each exam into a managed session — from preparation and document import through testing, staff review,
-                export, and restoration. Word automation handles document operations, while a privileged Windows background service
-                applies approved machine settings without requiring staff to repeatedly enter administrator credentials.
+                Mode-specific controls for Wi‑Fi, USB storage, and browser access; focus-return assistance and staff-PIN
+                handoff. Prior machine settings are recorded so the app can restore them afterward. Not a secure lockdown
+                browser or guarantee against unauthorized access or data loss.
               </p>
               <p>
-                I also built safeguards around student work: automatic Word saves, rolling recovery copies, a verified Finish
-                checkpoint, and file-hash checks during export. Interrupted sessions enter a recovery workflow before another test
-                can begin.
+                Built with <strong>C#, WPF/XAML, Word COM automation, and PowerShell</strong>, with separate UI, session-model,
+                and service layers.
               </p>
-              <p><strong>3. Add testing controls without sacrificing accommodations</strong></p>
+              <h4>Status &amp; Results</h4>
               <p>
-                I integrated mode-specific controls for Wi‑Fi, USB storage, and browser access, alongside focus-return assistance and
-                staff-PIN handoff. Machine settings are recorded before changes so the application can restore the previous
-                configuration afterward.
-              </p>
-              <h4>Engineering and validation</h4>
-              <p>
-                Built with <strong>C#, WPF/XAML, Word COM automation, and PowerShell</strong>, with separate interface,
-                session-model, and service layers.
+                <strong>Beta / pilot validation</strong> (documented release: Beta 4.5). Not described as institution-wide
+                production deployment. No confidential student data, exam content, or internal procedures are published here.
               </p>
             </div>
           </details>
@@ -193,15 +186,14 @@
             <p class="project-org">Success for Geneva's Children</p>
             <h3><a href="#project-sfgc">Success for Geneva's Children — Integrated Internal Dashboard</a></h3>
             <p class="project-summary">
-              Modular R Shiny stewardship app (v4) for community indicator data: goal-level overview, in-app dataset
-              maintenance, report-mode exploration, system diagnostics, and role-based access on a Neon-backed registry.
+              An internal dashboard that helps staff maintain community indicator data, explore trends, and create
+              report-ready charts—with role-based access and centralized data management.
             </p>
             <div class="tags">
               <span class="tag">R</span>
               <span class="tag">Shiny</span>
-              <span class="tag">bslib</span>
               <span class="tag">ggplot2</span>
-              <span class="tag">Neon Postgres</span>
+              <span class="tag">PostgreSQL</span>
             </div>
           </div>
           <details class="case-study case-study--featured">
@@ -209,27 +201,28 @@
             <div class="case-study-inner">
               <h4>Problem</h4>
               <p>
-                Community reporting drew from state portals, Census data, schools, and local partners. Repeated manual
-                collection made updates, backups, and source tracing difficult for staff maintaining ten community goals.
+                Community reporting drew from state portals, Census data, schools, and local partners. Manual collection
+                made updates, backups, and source tracing difficult across ten community goals.
               </p>
-              <h4>Solution</h4>
+              <h4>What I Built</h4>
               <p>
-                Built an integrated internal dashboard that unifies stewardship, exploration, and pipeline visibility in
-                one bslib-themed Shiny application, with authenticated roles (viewer, editor, administrator) and a central
-                dataset registry.
+                An internal R Shiny application where staff can maintain datasets, explore indicators, monitor refresh and
+                attribution, and build exportable charts—with viewer, editor, and administrator roles.
               </p>
-              <h4>Implementation</h4>
+              <h4>Technical Approach</h4>
               <ul>
-                <li><strong>Overview</strong> — goal sidebar, dataset cards per community goal, and an in-app dataset editor (update, view, backup, restore).</li>
-                <li><strong>Explore (Report Mode)</strong> — plot builder with goal/dataset filters, exports, captions, and a filtered data table aligned to each chart.</li>
-                <li><strong>System &amp; Diagnostics</strong> — health stats, dataset catalog (including archive/restore), activity log, and administrator user management.</li>
-                <li><strong>Data layer</strong> — Neon Postgres registry, automated fetcher registry integration, and pipeline tooling for refresh and attribution metadata.</li>
-                <li><strong>In-app assistant</strong> — context-aware help grounded in dashboard structure and permissions.</li>
+                <li><strong>Maintaining datasets</strong> — in-app editor to update, view, back up, and restore community indicator files tied to each goal.</li>
+                <li><strong>Exploring indicators</strong> — plot builder with filters, captions, exports, and a data table aligned to each chart.</li>
+                <li><strong>Pipelines and sources</strong> — system views for dataset catalog, activity log, and tooling to refresh data and retain source metadata (including automated fetcher integration and a PostgreSQL registry on Neon).</li>
+                <li><strong>Access control</strong> — role-based permissions for viewing, editing, and administration.</li>
               </ul>
-              <h4>Outcomes</h4>
+              <p class="case-study-note" style="font-size:0.875rem;margin-top:0.75rem;">
+                Stack includes R, Shiny, bslib, ggplot2, and Neon-hosted PostgreSQL where documented in the project.
+              </p>
+              <h4>Status &amp; Results</h4>
               <p>
-                Staff can refresh indicators, trace sources, and produce report-ready visuals from one interface instead
-                of ad hoc spreadsheets and disconnected files.
+                Internal staff dashboard (not a public site). Delivers the capabilities above for authorized users; operational
+                impact and time savings are not documented on this portfolio.
               </p>
             </div>
           </details>
@@ -243,7 +236,7 @@
           <div class="project-body">
             <h3>Town of Geneva Economic Development GIS Map</h3>
             <p class="project-summary">
-              Interactive map on the Town of Geneva website to help users locate parcels and geographic incentive areas.
+              An interactive map that helps users locate parcels and geographic incentive areas on the Town of Geneva website.
             </p>
             <div class="tags">
               <span class="tag">ArcGIS Pro</span>
@@ -260,8 +253,7 @@
           <div class="project-body">
             <h3>It Stinks</h3>
             <p class="project-summary">
-              Community odor-reporting platform for residents to submit environmental odor concerns, with cloud storage
-              and administrative workflow support.
+              A community odor-reporting platform with resident submissions, cloud storage, and administrative workflows.
             </p>
             <p class="project-links">
               <a href="https://itstinks.org/" rel="noopener noreferrer">Live project</a>
@@ -274,8 +266,8 @@
           <div class="project-body">
             <h3>BluePrint Geneva Website Redevelopment</h3>
             <p class="project-summary">
-              Redeveloped the public website for a community-focused nonprofit, improving information organization and
-              access to community resources.
+              A nonprofit website redevelopment focused on clearer navigation, better-organized information, and easier access
+              to community resources.
             </p>
             <p class="project-links">
               <a href="https://www.blueprintgeneva.org/home" rel="noopener noreferrer">Live project</a>
@@ -288,8 +280,8 @@
           <div class="project-body">
             <h3>NYC Transportation Safety &amp; Income Analysis</h3>
             <p class="project-summary">
-              Research analysis joining NYC collision records with Census household-income data — see
-              <a href="#research">Research</a> for methodology.
+              An analysis combining NYC collision records and Census income estimates to examine how household-normalized rates
+              change the interpretation of geographic patterns. See <a href="#research">Research</a> for methodology.
             </p>
             <div class="tags">
               <span class="tag">Data cleaning</span>
@@ -306,27 +298,21 @@
       <h2 class="section-title" id="experience-heading">Experience</h2>
       <ol class="timeline">
         <li>
+          <h3>Technical Support Specialist</h3>
+          <p class="meta">Hobart and William Smith Colleges · July 2026–Present</p>
+          <p>Institutional technical support.</p>
+          <p>Developed accommodated exam testing software (beta/pilot).</p>
+        </li>
+        <li>
           <h3>Software Engineer (Contract)</h3>
           <p class="meta">BluePrint Geneva · June 2025–Present</p>
-          <p>
-            Built and maintained the Geneva community air quality data pipeline and public dashboard; presented work at
-            ASIC 2026.
-          </p>
+          <p>Built and maintain the Geneva community air quality pipeline and public dashboard.</p>
+          <p>Presented the dashboard at ASIC 2026.</p>
         </li>
         <li>
           <h3>Software Engineer (Contract)</h3>
           <p class="meta">Success for Geneva's Children · February 2026–July 2026</p>
-          <p>
-            Built the integrated internal dashboard — goal overview, dataset editor, report-mode explorer,
-            system diagnostics, and Neon-backed registry with role-based access.
-          </p>
-        </li>
-        <li>
-          <h3>Technical Support Specialist</h3>
-          <p class="meta">Hobart and William Smith Colleges · July 2026–Present</p>
-          <p>
-            Institutional technical support; developed accommodated exam testing software (beta/pilot).
-          </p>
+          <p>Built the integrated internal dashboard for community indicator data stewardship and reporting.</p>
         </li>
       </ol>
     </section>
@@ -338,26 +324,28 @@
         <article class="research-card">
           <h3>Honors Thesis — Hyperlocal Air Quality Monitoring with Low-Cost Sensors</h3>
           <p>
-            Research on community air quality monitoring and dashboard design informed by community-based participatory
+            Thesis research on community air quality monitoring and dashboard design, drawing on community-based participatory
             research, risk communication, and environmental justice literature.
           </p>
         </article>
         <article class="research-card">
           <h3>Geneva Community Air Quality Dashboard — ASIC 2026</h3>
           <p>
-            Poster presentation, Air Sensors International Conference, Los Angeles, May 2026.
+            Poster presentation at the Air Sensors International Conference, Los Angeles, May 2026.
           </p>
         </article>
         <article class="research-card" id="research-nyc-transport">
           <h3>NYC Transportation Safety &amp; Income Analysis</h3>
           <p>
-            Analyzed approximately 65,000 NYC motor-vehicle collision records (2024, after cleaning/filtering) with
-            Census household-income estimates at ZIP-code geography. Compared raw collision totals with rates per
-            100,000 households — normalization changed the interpretation of collision, injury, and fatality patterns.
+            Analysis of approximately 65,000 NYC motor-vehicle collision records (2024, after cleaning/filtering) joined with
+            Census household-income estimates at ZIP-code geography.
+          </p>
+          <p>
+            Compared raw collision totals with rates per 100,000 households. Normalization changed how collision, injury, and
+            fatality patterns read across areas; household-normalized rates are not direct measures of individual travel risk.
           </p>
           <p style="font-size:0.875rem;margin-top:0.75rem;">
-            Findings describe associations in the analyzed dataset, not causal claims. Income, infrastructure, vehicle
-            safety, and emergency response remain hypotheses for further study.
+            Findings describe associations in the analyzed data, not causal effects.
           </p>
         </article>
       </div>
@@ -369,15 +357,19 @@
       <div class="skills-grid">
         <div class="skill-group">
           <h3>Programming &amp; Data</h3>
-          <p>Python, R, SQL, pandas, NumPy, dplyr, ggplot2, MySQL, REST APIs, ETL, data validation</p>
+          <p>Python, R, SQL, pandas, NumPy, dplyr, ggplot2, PostgreSQL, MySQL, REST APIs, ETL, data validation</p>
+        </div>
+        <div class="skill-group">
+          <h3>Desktop &amp; Automation</h3>
+          <p>C#, WPF/XAML, PowerShell, Microsoft Word COM automation</p>
         </div>
         <div class="skill-group">
           <h3>Cloud &amp; Infrastructure</h3>
           <p>Google Cloud, BigQuery, Cloud Run, Cloud Functions, Pub/Sub, Cloud Scheduler, Docker, Git</p>
         </div>
         <div class="skill-group">
-          <h3>GIS &amp; Visualization</h3>
-          <p>ArcGIS Pro, ArcGIS Online, Survey123, GeoPandas, Python Shiny, R Shiny</p>
+          <h3>GIS &amp; Dashboards</h3>
+          <p>ArcGIS Pro, ArcGIS Online, Survey123, GeoPandas, Shiny for Python, R Shiny</p>
         </div>
       </div>
     </section>
@@ -388,43 +380,39 @@
       <div class="about-grid">
         <div>
           <p>
-            I am a software engineer and data analyst focused on practical systems for nonprofits,
-            universities, research groups, and community organizations — from ingestion and quality control through
-            deployment and maintainable interfaces.
+            I’m a software engineer and data analyst building practical systems for nonprofits, universities, research groups,
+            and community organizations.
           </p>
           <p>
-            I work across Python and R, cloud data infrastructure, GIS, and interactive dashboards. I care about
-            reliability, source attribution, accessibility, and honest communication of what data can and cannot
-            establish.
+            My work spans data pipelines, desktop applications, GIS, and interactive dashboards. I focus on reliability,
+            accessibility, maintainability, and clear communication of what data can—and cannot—show.
           </p>
         </div>
         <aside class="education-block">
           <h3>Education</h3>
           <p><strong>Hobart and William Smith Colleges</strong></p>
-          <p>B.S. in Computer Science<br>
-            Minor in Data Analytics<br>
-            Honors in Data Analytics<br>
-            Graduated May 2026</p>
+          <p>B.S. in Computer Science</p>
+          <p>Minor in Data Analytics</p>
+          <p>Honors in Data Analytics</p>
+          <p>Graduated May 2026</p>
         </aside>
       </div>
     </section>
 
     <section class="section" id="contact" aria-labelledby="contact-heading">
-      <p class="section-label">Work together</p>
-      <h2 class="section-title" id="contact-heading">Contact &amp; Contract Availability</h2>
+      <p class="section-label">Contact</p>
+      <h2 class="section-title" id="contact-heading">Let’s Work Together</h2>
       <p class="section-intro">
-        I welcome inquiries from nonprofits, universities, research institutions, and environmental organizations
-        for project-based contract work.
+        Have a project involving data, dashboards, GIS, or custom software? I welcome project-based contract inquiries from
+        nonprofits, universities, research groups, and environmental organizations.
       </p>
       <h3 style="font-size:1rem;margin:0 0 0.5rem;">Services</h3>
       <ul class="services-list">
-        <li>Data engineering and ETL automation</li>
-        <li>Environmental and air quality data analysis</li>
+        <li>Data pipelines and API integrations</li>
+        <li>Interactive dashboards and reporting tools</li>
         <li>GIS mapping and spatial analysis</li>
-        <li>Interactive dashboard development</li>
-        <li>Research data infrastructure</li>
-        <li>API integrations</li>
-        <li>Custom software development</li>
+        <li>Environmental and research data analysis</li>
+        <li>Custom software and workflow automation</li>
       </ul>
       <ul class="contact-list">
         <li>Email: <a href="mailto:Emmanuela0428@gmail.com">Emmanuela0428@gmail.com</a></li>
