@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title">
+  <title id="title">Screenshot placeholder</title>
+  <rect width="800" height="500" fill="#e8ebe6"/>
+  <rect x="40" y="40" width="720" height="420" fill="#f7f6f3" stroke="#d8dde6" stroke-width="2"/>
+  <text x="400" y="240" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#4a5568">Screenshot placeholder</text>
+  <text x="400" y="270" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#718096">Replace with project image in assets/images/projects/</text>
+</svg>

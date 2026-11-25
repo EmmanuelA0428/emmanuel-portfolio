@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Emmanuel Appiah — software engineer and data analytics professional building data pipelines, interactive dashboards, GIS tools, and software for nonprofits and community organizations.">
+  <meta name="author" content="Emmanuel Appiah">
+  <meta property="og:title" content="Emmanuel Appiah — Software Engineer &amp; Data Analytics">
+  <meta property="og:description" content="Data engineering, environmental analytics, GIS, and interactive dashboards for community and nonprofit organizations.">
+  <meta property="og:type" content="website">
+  <title>Emmanuel Appiah — Software Engineer &amp; Data Analytics</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Emmanuel Appiah</a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#resume">Résumé</a>
+      </nav>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#resume">Résumé</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="hero section">
+      <h1>Emmanuel Appiah</h1>
+      <p class="title">Software Engineer &amp; Data Analytics Professional</p>
+      <p class="availability">Available for remote contract and part-time opportunities</p>
+      <p class="lede">
+        I build data infrastructure, interactive dashboards, geospatial applications, and software solutions
+        that help organizations turn complex data into accessible and actionable information.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">Explore Projects</a>
+        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+      </div>
+    </header>
+
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title" id="projects-heading">Selected Projects</h2>
+      <p class="section-intro">
+        End-to-end work across environmental monitoring, community data platforms, desktop software, and GIS —
+        with emphasis on maintainable pipelines and interfaces people can actually use.
+      </p>
+
+      <div class="project-featured">
+        <!-- Flagship: Geneva AQ -->
+        <article class="project-card featured" id="project-geneva-aq">
+          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — Geneva Community Air Quality Dashboard screenshot">
+          <div class="project-body">
+            <p class="project-org">BluePrint Geneva</p>
+            <h3><a href="#project-geneva-aq">Geneva Community Air Quality Dashboard</a></h3>
+            <p class="project-summary">
+              An end-to-end community air quality monitoring platform that collects, processes, analyzes, and
+              visualizes environmental sensor data for residents and advocates.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Shiny</span>
+              <span class="tag">BigQuery</span>
+              <span class="tag">Google Cloud</span>
+              <span class="tag">GIS</span>
+            </div>
+            <p class="project-links">
+              <a href="https://geneva-dashboard-demo-589767316676.us-east1.run.app" rel="noopener noreferrer">Live demo</a>
+            </p>
+            <span class="placeholder-badge">Screenshot placeholder</span>
+            <details class="case-study">
+              <summary>Case study</summary>
+              <div class="case-study-inner">
+                <h4>Problem</h4>
+                <p>
+                  Six community RAMP sensors produced minute-level readings, but data lived in a vendor portal —
+                  inaccessible for public communication and advocacy.
+                </p>
+                <h4>Solution</h4>
+                <p>
+                  Built an automated cloud pipeline and a public Shiny dashboard that translate sensor readings into
+                  EPA AQI categories, maps, trends, freshness indicators, and honest communication of coverage limits.
+                </p>
+                <h4>Implementation</h4>
+                <ul>
+                  <li>Integrated six Sensit RAMP sensors through the Sensit Connect API.</li>
+                  <li>Developed automated ETL on Google Cloud (Scheduler → Pub/Sub → Cloud Function → BigQuery).</li>
+                  <li>Applied validation, completeness thresholds, temporal aggregation, and AQI calculations.</li>
+                  <li>Deployed an interactive public dashboard (maps, trends, sensor health) on Cloud Run.</li>
+                  <li>Infrastructure supports roughly 3.15 million potential sensor records per year (six sensors, one reading per minute).</li>
+                </ul>
+                <figure class="architecture">
+                  <img src="assets/images/projects/geneva-architecture.svg" width="720" height="220" alt="Architecture diagram: sensors to API, Cloud Function, BigQuery, analytics, Shiny on Cloud Run; Scheduler and Pub/Sub trigger ingestion">
+                  <figcaption>Data flow (solid) and scheduling/control (dashed). Scheduler does not carry sensor readings.</figcaption>
+                </figure>
+                <h4>Outcomes</h4>
+                <p>
+                  Presented the dashboard at the Air Sensors International Conference (Los Angeles, May 2026).
+                  Dashboard emphasizes accessibility and uncertainty — not regulatory-grade certainty.
+                </p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- CTL TestDesk -->
+        <article class="project-card featured" id="project-testdesk">
+          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — CTL TestDesk screenshot">
+          <div class="project-body">
+            <p class="project-org">Hobart and William Smith Colleges · Center for Teaching and Learning</p>
+            <h3><a href="#project-testdesk">CTL TestDesk — Accommodated Exam Management</a></h3>
+            <p class="project-summary">
+              A Windows desktop application that unifies staff-managed accommodated exam preparation, document handling,
+              accessibility configuration, export, and recovery — replacing a fragile USB-and-Word workflow.
+            </p>
+            <div class="tags">
+              <span class="tag">C#</span>
+              <span class="tag">WPF</span>
+              <span class="tag">PowerShell</span>
+              <span class="tag">Word automation</span>
+            </div>
+            <p class="project-summary" style="margin-top:0.75rem;font-size:0.875rem;">
+              <strong>Status:</strong> Beta / pilot validation (documented release: CTL TestDesk Beta 4.5) — not described as institution-wide production rollout.
+            </p>
+            <span class="placeholder-badge">Screenshot placeholder — sanitized only</span>
+            <details class="case-study">
+              <summary>Case study</summary>
+              <div class="case-study-inner">
+                <h4>Problem</h4>
+                <p>
+                  Staff prepared accommodated exams via manual laptops: Word files from USB drives, Wi‑Fi disabled,
+                  saves back to removable media, and clearing recent-document history between students.
+                </p>
+                <h4>Solution</h4>
+                <p>
+                  Desktop app with separated UI, session models, services, and configuration scripts. Primary workflow:
+                  offline Word examinations; secondary workflow: online exams in Microsoft Edge (Canvas, Posit).
+                </p>
+                <h4>Implementation (documented architecture)</h4>
+                <ul>
+                  <li>Session lifecycle: preparation, active testing, completion, staff review, verified export, recovery.</li>
+                  <li>Word import/automation, working copies, save verification, recovery snapshots.</li>
+                  <li>File-hash verification for transfers and exports.</li>
+                  <li>Windows Voice Access integration for speech-to-text (not a custom speech model).</li>
+                  <li>PowerShell integration for approved machine-level changes and restoration.</li>
+                </ul>
+                <h4>Scope boundaries</h4>
+                <p>
+                  Focus assistance — not a secure browser, tamper-proof exam system, or complete OS lockdown solution.
+                  No confidential student data, exam content, or internal procedures are published here.
+                </p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- SFGC -->
+        <article class="project-card featured" id="project-sfgc">
+          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — Success for Geneva's Children dashboard screenshot">
+          <div class="project-body">
+            <p class="project-org">Success for Geneva's Children</p>
+            <h3><a href="#project-sfgc">Success for Geneva's Children — Community Data Platform</a></h3>
+            <p class="project-summary">
+              A community data platform with separate public exploration and internal stewardship interfaces,
+              centralizing metadata, attribution, visualizations, and update workflows.
+            </p>
+            <div class="tags">
+              <span class="tag">R</span>
+              <span class="tag">Shiny</span>
+              <span class="tag">ggplot2</span>
+              <span class="tag">R Markdown</span>
+            </div>
+            <span class="placeholder-badge">Screenshot placeholder · Live URL TBD</span>
+            <details class="case-study">
+              <summary>Case study</summary>
+              <div class="case-study-inner">
+                <h4>Problem</h4>
+                <p>
+                  Community reporting drew from state portals, Census data, schools, and local partners — repeated
+                  manual collection made updates and source tracing difficult.
+                </p>
+                <h4>Solution</h4>
+                <p>
+                  Two R Shiny applications (documented V1): a public dashboard for exploration and downloads, and
+                  an internal stewardship app for dataset maintenance and freshness monitoring. Shared CSV-based
+                  registry with source metadata.
+                </p>
+                <h4>Public tools (documented)</h4>
+                <ul>
+                  <li>Dataset exploration, charts, summary statistics, CSV/PNG downloads, parameterized PDF/Word reports.</li>
+                </ul>
+                <h4>Internal tools (documented)</h4>
+                <ul>
+                  <li>CSV replacement or year-based appending, backups, freshness indicators, background pipeline runner.</li>
+                </ul>
+                <p>
+                  V1 documentation notes incomplete Goal 9 mapping — do not assume full coverage of all ten community
+                  goals without verifying the current release.
+                </p>
+              </div>
+            </details>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="section-label" style="margin-top:2rem;">Additional projects</h3>
+      <div class="project-compact-grid">
+        <article class="project-card" id="project-gis-town">
+          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — Town of Geneva economic development GIS map">
+          <div class="project-body">
+            <h3>Town of Geneva Economic Development GIS Map</h3>
+            <p class="project-summary">
+              Interactive map on the Town of Geneva website to help users locate parcels and geographic incentive areas.
+            </p>
+            <div class="tags">
+              <span class="tag">ArcGIS Pro</span>
+              <span class="tag">ArcGIS Online</span>
+            </div>
+            <p class="project-links">
+              <a href="https://townofgenevany.gov/departments_and_services/economic_development.php" rel="noopener noreferrer">Live project</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card" id="project-itstinks">
+          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — It Stinks application">
+          <div class="project-body">
+            <h3>It Stinks</h3>
+            <p class="project-summary">
+              Community odor-reporting platform for residents to submit environmental odor concerns, with cloud storage
+              and administrative workflow support.
+            </p>
+            <p class="project-links">
+              <a href="https://itstinks.org/" rel="noopener noreferrer">Live project</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card" id="project-bpg-web">
+          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — BluePrint Geneva website">
+          <div class="project-body">
+            <h3>BluePrint Geneva Website Redevelopment</h3>
+            <p class="project-summary">
+              Redeveloped the public website for a community-focused nonprofit, improving information organization and
+              access to community resources.
+            </p>
+            <p class="project-links">
+              <a href="https://www.blueprintgeneva.org/home" rel="noopener noreferrer">Live project</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card" id="project-nyc-transport">
+          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — NYC transportation safety research visualization">
+          <div class="project-body">
+            <h3>NYC Transportation Safety &amp; Income Analysis</h3>
+            <p class="project-summary">
+              Research analysis joining NYC collision records with Census household-income data — see
+              <a href="#research">Research</a> for methodology.
+            </p>
+            <div class="tags">
+              <span class="tag">Data cleaning</span>
+              <span class="tag">GIS</span>
+              <span class="tag">Visualization</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <p class="section-label">Work</p>
+      <h2 class="section-title" id="experience-heading">Professional Experience</h2>
+      <ol class="timeline">
+        <li>
+          <h3>Software Engineer (Contract)</h3>
+          <p class="meta">BluePrint Geneva · June 2025–Present</p>
+          <p>
+            Built and maintained the Geneva community air quality data pipeline and public dashboard; presented work at
+            ASIC 2026.
+          </p>
+        </li>
+        <li>
+          <h3>Software Engineer</h3>
+          <p class="meta">Success for Geneva's Children · February 2026–Present</p>
+          <p>
+            Developed the community data platform (public exploration and internal stewardship dashboards, registry,
+            and reporting workflows).
+          </p>
+        </li>
+        <li>
+          <h3>Technical Support Specialist</h3>
+          <p class="meta">Hobart and William Smith Colleges · July 2026–Present</p>
+          <p>
+            Institutional technical support; developed CTL TestDesk for accommodated exam management (beta/pilot).
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-heading">
+      <p class="section-label">Scholarship</p>
+      <h2 class="section-title" id="research-heading">Research &amp; Presentations</h2>
+      <div class="research-grid">
+        <article class="research-card">
+          <h3>Honors Thesis — Hyperlocal Air Quality Monitoring with Low-Cost Sensors</h3>
+          <p>
+            Research on community air quality monitoring and dashboard design informed by community-based participatory
+            research, risk communication, and environmental justice literature.
+          </p>
+        </article>
+        <article class="research-card">
+          <h3>Geneva Community Air Quality Dashboard — ASIC 2026</h3>
+          <p>
+            Poster presentation, Air Sensors International Conference, Los Angeles, May 2026.
+          </p>
+        </article>
+        <article class="research-card" id="research-nyc-transport">
+          <h3>NYC Transportation Safety &amp; Income Analysis</h3>
+          <p>
+            Analyzed approximately 65,000 NYC motor-vehicle collision records (2024, after cleaning/filtering) with
+            Census household-income estimates at ZIP-code geography. Compared raw collision totals with rates per
+            100,000 households — normalization changed the interpretation of collision, injury, and fatality patterns.
+          </p>
+          <p style="font-size:0.875rem;margin-top:0.75rem;">
+            Findings describe associations in the analyzed dataset, not causal claims. Income, infrastructure, vehicle
+            safety, and emergency response remain hypotheses for further study.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <p class="section-label">Toolkit</p>
+      <h2 class="section-title" id="skills-heading">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Programming &amp; Data</h3>
+          <p>Python, R, SQL, pandas, NumPy, dplyr, ggplot2, MySQL, REST APIs, ETL, data validation</p>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; Infrastructure</h3>
+          <p>Google Cloud, BigQuery, Cloud Run, Cloud Functions, Pub/Sub, Cloud Scheduler, Docker, Git</p>
+        </div>
+        <div class="skill-group">
+          <h3>GIS &amp; Visualization</h3>
+          <p>ArcGIS Pro, ArcGIS Online, Survey123, GeoPandas, Python Shiny, R Shiny</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <p class="section-label">Background</p>
+      <h2 class="section-title" id="about-heading">About &amp; Education</h2>
+      <div class="about-grid">
+        <div>
+          <p>
+            I am a software engineer and data analytics professional focused on practical systems for nonprofits,
+            universities, research groups, and community organizations — from ingestion and quality control through
+            deployment and maintainable interfaces.
+          </p>
+          <p>
+            I work across Python and R, cloud data infrastructure, GIS, and interactive dashboards. I care about
+            reliability, source attribution, accessibility, and honest communication of what data can and cannot
+            establish.
+          </p>
+        </div>
+        <aside class="education-block">
+          <h3>Education</h3>
+          <p><strong>Hobart and William Smith Colleges</strong></p>
+          <p>B.S. in Computer Science<br>
+            Minor in Data Analytics<br>
+            Honors in Data Analytics<br>
+            Graduated May 2026</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="resume" aria-labelledby="resume-heading">
+      <p class="section-label">Documents</p>
+      <h2 class="section-title" id="resume-heading">Résumé</h2>
+      <p class="resume-note">
+        PDF résumé is not bundled in this repository yet. For a current résumé, please
+        <a href="mailto:Emmanuela0428@gmail.com">email me</a> or connect on
+        <a href="https://www.linkedin.com/in/emmanuel-appiah0428" rel="noopener noreferrer">LinkedIn</a>.
+        <!-- When assets/documents/resume.pdf exists, add: <a class="btn btn-secondary" href="assets/documents/resume.pdf" download>Download résumé (PDF)</a> -->
+      </p>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <p class="section-label">Work together</p>
+      <h2 class="section-title" id="contact-heading">Contact &amp; Contract Availability</h2>
+      <p class="section-intro">
+        I welcome inquiries from nonprofits, universities, research institutions, and environmental organizations
+        for remote part-time and project-based contract work.
+      </p>
+      <h3 style="font-size:1rem;margin:0 0 0.5rem;">Services</h3>
+      <ul class="services-list">
+        <li>Data engineering and ETL automation</li>
+        <li>Environmental and air quality data analysis</li>
+        <li>GIS mapping and spatial analysis</li>
+        <li>Interactive dashboard development</li>
+        <li>Research data infrastructure</li>
+        <li>API integrations</li>
+        <li>Custom software development</li>
+      </ul>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:Emmanuela0428@gmail.com">Emmanuela0428@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/EmmanuelA0428" rel="noopener noreferrer">github.com/EmmanuelA0428</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-appiah0428" rel="noopener noreferrer">linkedin.com/in/emmanuel-appiah0428</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year">2026</span> Emmanuel Appiah</span>
+    <span>Portfolio · static site</span>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
