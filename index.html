@@ -47,7 +47,7 @@
     <header class="hero section">
       <h1>Emmanuel Appiah</h1>
       <p class="title">Software Engineer &amp; Data Analytics Professional</p>
-      <p class="availability">Available for remote contract and part-time opportunities</p>
+      <p class="availability">Available for contract opportunities</p>
       <p class="lede">
         I build data infrastructure, interactive dashboards, geospatial applications, and software solutions
         that help organizations turn complex data into accessible and actionable information.
@@ -62,14 +62,13 @@
       <p class="section-label">Portfolio</p>
       <h2 class="section-title" id="projects-heading">Selected Projects</h2>
       <p class="section-intro">
-        End-to-end work across environmental monitoring, community data platforms, desktop software, and GIS —
-        with emphasis on maintainable pipelines and interfaces people can actually use.
+        End-to-end work across environmental monitoring, community data platforms, desktop software, and GIS.
       </p>
 
       <div class="project-featured">
         <!-- Flagship: Geneva AQ -->
         <article class="project-card featured" id="project-geneva-aq">
-          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — Geneva Community Air Quality Dashboard screenshot">
+          <img class="project-thumb" src="assets/images/projects/geneva-aq.png" width="800" height="500" alt="Geneva Community Air Quality Dashboard — live demo">
           <div class="project-body">
             <p class="project-org">BluePrint Geneva</p>
             <h3><a href="#project-geneva-aq">Geneva Community Air Quality Dashboard</a></h3>
@@ -87,14 +86,12 @@
             <p class="project-links">
               <a href="https://geneva-dashboard-demo-589767316676.us-east1.run.app" rel="noopener noreferrer">Live demo</a>
             </p>
-            <span class="placeholder-badge">Screenshot placeholder</span>
             <details class="case-study">
               <summary>Case study</summary>
               <div class="case-study-inner">
                 <h4>Problem</h4>
                 <p>
-                  Six community RAMP sensors produced minute-level readings, but data lived in a vendor portal —
-                  inaccessible for public communication and advocacy.
+                  Six community RAMP sensors produced minute-level readings, but data lived in a vendor portal, which was inaccessible to the public.
                 </p>
                 <h4>Solution</h4>
                 <p>
@@ -116,7 +113,7 @@
                 <h4>Outcomes</h4>
                 <p>
                   Presented the dashboard at the Air Sensors International Conference (Los Angeles, May 2026).
-                  Dashboard emphasizes accessibility and uncertainty — not regulatory-grade certainty.
+                  Dashboard emphasizes accessibility and uncertainty, not regulatory-grade certainty.
                 </p>
               </div>
             </details>
@@ -124,8 +121,7 @@
         </article>
 
         <!-- CTL TestDesk -->
-        <article class="project-card featured" id="project-testdesk">
-          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — CTL TestDesk screenshot">
+        <article class="project-card featured project-card--no-media" id="project-testdesk">
           <div class="project-body">
             <p class="project-org">Hobart and William Smith Colleges · Center for Teaching and Learning</p>
             <h3><a href="#project-testdesk">CTL TestDesk — Accommodated Exam Management</a></h3>
@@ -140,9 +136,8 @@
               <span class="tag">Word automation</span>
             </div>
             <p class="project-summary" style="margin-top:0.75rem;font-size:0.875rem;">
-              <strong>Status:</strong> Beta / pilot validation (documented release: CTL TestDesk Beta 4.5) — not described as institution-wide production rollout.
+              <strong>Status:</strong> Beta / pilot validation (documented release: CTL TestDesk Beta 4.5).
             </p>
-            <span class="placeholder-badge">Screenshot placeholder — sanitized only</span>
             <details class="case-study">
               <summary>Case study</summary>
               <div class="case-study-inner">
@@ -175,47 +170,47 @@
         </article>
 
         <!-- SFGC -->
-        <article class="project-card featured" id="project-sfgc">
-          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — Success for Geneva's Children dashboard screenshot">
+        <article class="project-card featured project-card--no-media" id="project-sfgc">
           <div class="project-body">
             <p class="project-org">Success for Geneva's Children</p>
-            <h3><a href="#project-sfgc">Success for Geneva's Children — Community Data Platform</a></h3>
+            <h3><a href="#project-sfgc">Success for Geneva's Children — Integrated Internal Dashboard</a></h3>
             <p class="project-summary">
-              A community data platform with separate public exploration and internal stewardship interfaces,
-              centralizing metadata, attribution, visualizations, and update workflows.
+              Modular R Shiny stewardship app (v4) for community indicator data: goal-level overview, in-app dataset
+              maintenance, report-mode exploration, system diagnostics, and role-based access on a Neon-backed registry.
             </p>
             <div class="tags">
               <span class="tag">R</span>
               <span class="tag">Shiny</span>
+              <span class="tag">bslib</span>
               <span class="tag">ggplot2</span>
-              <span class="tag">R Markdown</span>
+              <span class="tag">Neon Postgres</span>
             </div>
-            <span class="placeholder-badge">Screenshot placeholder · Live URL TBD</span>
             <details class="case-study">
               <summary>Case study</summary>
               <div class="case-study-inner">
                 <h4>Problem</h4>
                 <p>
-                  Community reporting drew from state portals, Census data, schools, and local partners — repeated
-                  manual collection made updates and source tracing difficult.
+                  Community reporting drew from state portals, Census data, schools, and local partners. Repeated manual
+                  collection made updates, backups, and source tracing difficult for staff maintaining ten community goals.
                 </p>
                 <h4>Solution</h4>
                 <p>
-                  Two R Shiny applications (documented V1): a public dashboard for exploration and downloads, and
-                  an internal stewardship app for dataset maintenance and freshness monitoring. Shared CSV-based
-                  registry with source metadata.
+                  Built an integrated internal dashboard that unifies stewardship, exploration, and pipeline visibility in
+                  one bslib-themed Shiny application, with authenticated roles (viewer, editor, administrator) and a central
+                  dataset registry.
                 </p>
-                <h4>Public tools (documented)</h4>
+                <h4>Implementation</h4>
                 <ul>
-                  <li>Dataset exploration, charts, summary statistics, CSV/PNG downloads, parameterized PDF/Word reports.</li>
+                  <li><strong>Overview</strong> — goal sidebar, dataset cards per community goal, and an in-app dataset editor (update, view, backup, restore).</li>
+                  <li><strong>Explore (Report Mode)</strong> — plot builder with goal/dataset filters, exports, captions, and a filtered data table aligned to each chart.</li>
+                  <li><strong>System &amp; Diagnostics</strong> — health stats, dataset catalog (including archive/restore), activity log, and administrator user management.</li>
+                  <li><strong>Data layer</strong> — Neon Postgres registry, automated fetcher registry integration, and pipeline tooling for refresh and attribution metadata.</li>
+                  <li><strong>In-app assistant</strong> — context-aware help grounded in dashboard structure and permissions.</li>
                 </ul>
-                <h4>Internal tools (documented)</h4>
-                <ul>
-                  <li>CSV replacement or year-based appending, backups, freshness indicators, background pipeline runner.</li>
-                </ul>
+                <h4>Outcomes</h4>
                 <p>
-                  V1 documentation notes incomplete Goal 9 mapping — do not assume full coverage of all ten community
-                  goals without verifying the current release.
+                  Staff can refresh indicators, trace sources, and produce report-ready visuals from one interface instead
+                  of ad hoc spreadsheets and disconnected files.
                 </p>
               </div>
             </details>
@@ -226,7 +221,7 @@
       <h3 class="section-label" style="margin-top:2rem;">Additional projects</h3>
       <div class="project-compact-grid">
         <article class="project-card" id="project-gis-town">
-          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — Town of Geneva economic development GIS map">
+          <img class="project-thumb" src="assets/images/projects/gis-town.png" width="800" height="500" alt="Town of Geneva economic development — interactive GIS map">
           <div class="project-body">
             <h3>Town of Geneva Economic Development GIS Map</h3>
             <p class="project-summary">
@@ -243,7 +238,7 @@
         </article>
 
         <article class="project-card" id="project-itstinks">
-          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — It Stinks application">
+          <img class="project-thumb" src="assets/images/projects/it-stinks.png" width="800" height="500" alt="It Stinks — community odor reporting">
           <div class="project-body">
             <h3>It Stinks</h3>
             <p class="project-summary">
@@ -257,7 +252,7 @@
         </article>
 
         <article class="project-card" id="project-bpg-web">
-          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — BluePrint Geneva website">
+          <img class="project-thumb" src="assets/images/projects/bpg-web.png" width="800" height="500" alt="BluePrint Geneva — public website">
           <div class="project-body">
             <h3>BluePrint Geneva Website Redevelopment</h3>
             <p class="project-summary">
@@ -270,8 +265,7 @@
           </div>
         </article>
 
-        <article class="project-card" id="project-nyc-transport">
-          <img class="project-thumb" src="assets/images/projects/placeholder.svg" width="800" height="500" alt="Placeholder — NYC transportation safety research visualization">
+        <article class="project-card project-card--no-media" id="project-nyc-transport">
           <div class="project-body">
             <h3>NYC Transportation Safety &amp; Income Analysis</h3>
             <p class="project-summary">
@@ -304,8 +298,8 @@
           <h3>Software Engineer</h3>
           <p class="meta">Success for Geneva's Children · February 2026–Present</p>
           <p>
-            Developed the community data platform (public exploration and internal stewardship dashboards, registry,
-            and reporting workflows).
+            Built and maintain the integrated internal dashboard — goal overview, dataset editor, report-mode explorer,
+            system diagnostics, and Neon-backed registry with role-based access.
           </p>
         </li>
         <li>
@@ -412,7 +406,7 @@
       <h2 class="section-title" id="contact-heading">Contact &amp; Contract Availability</h2>
       <p class="section-intro">
         I welcome inquiries from nonprofits, universities, research institutions, and environmental organizations
-        for remote part-time and project-based contract work.
+        for remote, project-based contract work.
       </p>
       <h3 style="font-size:1rem;margin:0 0 0.5rem;">Services</h3>
       <ul class="services-list">

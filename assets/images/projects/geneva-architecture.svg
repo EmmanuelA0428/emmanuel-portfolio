@@ -1,18 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="archTitle archDesc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 236" role="img" aria-labelledby="archTitle archDesc">
   <title id="archTitle">Geneva air quality platform architecture</title>
   <desc id="archDesc">Data flow from sensors through API and BigQuery to dashboard; scheduling via Cloud Scheduler and Pub/Sub.</desc>
   <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6 Z" fill="#1e3a5f"/>
+    <marker id="arrow-solid" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1e3a5f"/>
     </marker>
   </defs>
   <style>
     .box { fill: #fff; stroke: #1e3a5f; stroke-width: 1.2; }
     .label { font: 600 11px system-ui, sans-serif; fill: #1a2332; }
     .sub { font: 10px system-ui, sans-serif; fill: #4a5568; }
-    .flow { stroke: #1e3a5f; stroke-width: 1.2; fill: none; marker-end: url(#arrow); }
-    .control { stroke: #2c5282; stroke-width: 1; stroke-dasharray: 4 3; fill: none; marker-end: url(#arrow); }
+    .flow { stroke: #1e3a5f; stroke-width: 1.2; fill: none; marker-end: url(#arrow-solid); }
+    .control { stroke: #2c5282; stroke-width: 1.2; fill: none; stroke-dasharray: 6 4; }
+    .control-label { font: 600 9px system-ui, sans-serif; fill: #2c5282; }
   </style>
+  <!-- Data flow -->
   <rect class="box" x="8" y="72" width="88" height="76" rx="2"/>
   <text class="label" x="52" y="102" text-anchor="middle">RAMP</text>
   <text class="sub" x="52" y="118" text-anchor="middle">sensors</text>
@@ -37,12 +39,13 @@
   <rect class="box" x="640" y="72" width="72" height="76" rx="2"/>
   <text class="label" x="676" y="102" text-anchor="middle">Shiny</text>
   <text class="sub" x="676" y="118" text-anchor="middle">Cloud Run</text>
-  <rect class="box" x="248" y="178" width="88" height="32" rx="2"/>
-  <text class="sub" x="292" y="198" text-anchor="middle">Scheduler</text>
-  <line class="control" x1="292" y1="178" x2="292" y2="162"/>
-  <rect class="box" x="352" y="178" width="72" height="32" rx="2"/>
-  <text class="sub" x="388" y="198" text-anchor="middle">Pub/Sub</text>
-  <line class="control" x1="292" y1="194" x2="352" y2="194"/>
-  <line class="control" x1="388" y1="178" x2="388" y2="162"/>
-  <line class="control" x1="388" y1="162" x2="300" y2="162"/>
+  <!-- Control plane (no arrow markers on dashes) -->
+  <text class="control-label" x="360" y="212" text-anchor="middle">Scheduling (triggers ingestion)</text>
+  <rect class="box" x="228" y="178" width="96" height="30" rx="2"/>
+  <text class="sub" x="276" y="197" text-anchor="middle">Scheduler</text>
+  <rect class="box" x="396" y="178" width="80" height="30" rx="2"/>
+  <text class="sub" x="436" y="197" text-anchor="middle">Pub/Sub</text>
+  <polyline class="control" points="276,178 276,168 436,168 436,178"/>
+  <line class="control" x1="276" y1="168" x2="276" y2="162"/>
+  <line class="control" x1="300" y1="162" x2="300" y2="110"/>
 </svg>

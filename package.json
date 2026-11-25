@@ -1,0 +1,21 @@
+{
+  "name": "emmanuel-portfolio",
+  "version": "1.0.0",
+  "description": "Plain HTML, CSS, and vanilla JavaScript. Designed for [GitHub Pages](https://pages.github.com/) (no build step).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelA0428/emmanuel-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EmmanuelA0428/emmanuel-portfolio/issues"
+  },
+  "homepage": "https://github.com/EmmanuelA0428/emmanuel-portfolio#readme"
+}
