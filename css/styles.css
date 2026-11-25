@@ -340,17 +340,35 @@ main {
 }
 
 .project-card.featured {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-main {
   display: grid;
 }
 
 @media (min-width: 768px) {
-  .project-card.featured {
+  .featured-main {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 
-  .project-card.featured.project-card--no-media {
+  .project-card.featured.project-card--no-media .featured-main {
     grid-template-columns: 1fr;
   }
+}
+
+.featured-main .project-body {
+  padding-bottom: 1.15rem;
+}
+
+details.case-study--featured {
+  flex: none;
+  width: 100%;
+  margin-top: 0;
+  padding: 1rem 1.35rem 1.5rem;
+  border-top: 1px solid var(--border);
+  box-sizing: border-box;
 }
 
 .project-thumb {

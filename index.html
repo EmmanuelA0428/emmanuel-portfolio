@@ -68,6 +68,7 @@
       <div class="project-featured">
         <!-- Flagship: Geneva AQ -->
         <article class="project-card featured" id="project-geneva-aq">
+          <div class="featured-main">
           <img class="project-thumb" src="assets/images/projects/geneva-aq.png" width="800" height="500" alt="Geneva Community Air Quality Dashboard — live demo">
           <div class="project-body">
             <p class="project-org">BluePrint Geneva</p>
@@ -86,38 +87,40 @@
             <p class="project-links">
               <a href="https://geneva-dashboard-demo-589767316676.us-east1.run.app" rel="noopener noreferrer">Live demo</a>
             </p>
-            <details class="case-study">
-              <summary>Case study</summary>
-              <div class="case-study-inner">
-                <h4>Problem</h4>
-                <p>
-                  Six community RAMP sensors produced minute-level readings, but data lived in a vendor portal, which was inaccessible to the public.
-                </p>
-                <h4>Solution</h4>
-                <p>
-                  Built an automated cloud pipeline and a public Shiny dashboard that translate sensor readings into
-                  EPA AQI categories, maps, trends, freshness indicators, and honest communication of coverage limits.
-                </p>
-                <h4>Implementation</h4>
-                <ul>
-                  <li>Integrated six Sensit RAMP sensors through the Sensit Connect API.</li>
-                  <li>Developed automated ETL on Google Cloud (Scheduler → Pub/Sub → Cloud Function → BigQuery).</li>
-                  <li>Applied validation, completeness thresholds, temporal aggregation, and AQI calculations.</li>
-                  <li>Deployed an interactive public dashboard (maps, trends, sensor health) on Cloud Run.</li>
-                  <li>Infrastructure supports roughly 3.15 million potential sensor records per year (six sensors, one reading per minute).</li>
-                </ul>
-                <h4>Outcomes</h4>
-                <p>
-                  Presented the dashboard at the Air Sensors International Conference (Los Angeles, May 2026).
-                  Dashboard emphasizes accessibility and uncertainty, not regulatory-grade certainty.
-                </p>
-              </div>
-            </details>
           </div>
+          </div>
+          <details class="case-study case-study--featured">
+            <summary>Case study</summary>
+            <div class="case-study-inner">
+              <h4>Problem</h4>
+              <p>
+                Six community RAMP sensors produced minute-level readings, but data lived in a vendor portal, which was inaccessible to the public.
+              </p>
+              <h4>Solution</h4>
+              <p>
+                Built an automated cloud pipeline and a public Shiny dashboard that translate sensor readings into
+                EPA AQI categories, maps, trends, freshness indicators, and honest communication of coverage limits.
+              </p>
+              <h4>Implementation</h4>
+              <ul>
+                <li>Integrated six Sensit RAMP sensors through the Sensit Connect API.</li>
+                <li>Developed automated ETL on Google Cloud (Scheduler → Pub/Sub → Cloud Function → BigQuery).</li>
+                <li>Applied validation, completeness thresholds, temporal aggregation, and AQI calculations.</li>
+                <li>Deployed an interactive public dashboard (maps, trends, sensor health) on Cloud Run.</li>
+                <li>Infrastructure supports roughly 3.15 million potential sensor records per year (six sensors, one reading per minute).</li>
+              </ul>
+              <h4>Outcomes</h4>
+              <p>
+                Presented the dashboard at the Air Sensors International Conference (Los Angeles, May 2026).
+                Dashboard emphasizes accessibility and uncertainty, not regulatory-grade certainty.
+              </p>
+            </div>
+          </details>
         </article>
 
         <!-- CTL TestDesk -->
         <article class="project-card featured project-card--no-media" id="project-testdesk">
+          <div class="featured-main">
           <div class="project-body">
             <p class="project-org">Hobart and William Smith Colleges · Center for Teaching and Learning</p>
             <h3><a href="#project-testdesk">CTL TestDesk — Accommodated Exam Management</a></h3>
@@ -134,39 +137,41 @@
             <p class="project-summary" style="margin-top:0.75rem;font-size:0.875rem;">
               <strong>Status:</strong> Beta / pilot validation (documented release: CTL TestDesk Beta 4.5).
             </p>
-            <details class="case-study">
-              <summary>Case study</summary>
-              <div class="case-study-inner">
-                <h4>Problem</h4>
-                <p>
-                  Staff prepared accommodated exams via manual laptops: Word files from USB drives, Wi‑Fi disabled,
-                  saves back to removable media, and clearing recent-document history between students.
-                </p>
-                <h4>Solution</h4>
-                <p>
-                  Desktop app with separated UI, session models, services, and configuration scripts. Primary workflow:
-                  offline Word examinations; secondary workflow: online exams in Microsoft Edge (Canvas, Posit).
-                </p>
-                <h4>Implementation (documented architecture)</h4>
-                <ul>
-                  <li>Session lifecycle: preparation, active testing, completion, staff review, verified export, recovery.</li>
-                  <li>Word import/automation, working copies, save verification, recovery snapshots.</li>
-                  <li>File-hash verification for transfers and exports.</li>
-                  <li>Windows Voice Access integration for speech-to-text (not a custom speech model).</li>
-                  <li>PowerShell integration for approved machine-level changes and restoration.</li>
-                </ul>
-                <h4>Scope boundaries</h4>
-                <p>
-                  Focus assistance — not a secure browser, tamper-proof exam system, or complete OS lockdown solution.
-                  No confidential student data, exam content, or internal procedures are published here.
-                </p>
-              </div>
-            </details>
           </div>
+          </div>
+          <details class="case-study case-study--featured">
+            <summary>Case study</summary>
+            <div class="case-study-inner">
+              <h4>Problem</h4>
+              <p>
+                Staff prepared accommodated exams via manual laptops: Word files from USB drives, Wi‑Fi disabled,
+                saves back to removable media, and clearing recent-document history between students.
+              </p>
+              <h4>Solution</h4>
+              <p>
+                Desktop app with separated UI, session models, services, and configuration scripts. Primary workflow:
+                offline Word examinations; secondary workflow: online exams in Microsoft Edge (Canvas, Posit).
+              </p>
+              <h4>Implementation (documented architecture)</h4>
+              <ul>
+                <li>Session lifecycle: preparation, active testing, completion, staff review, verified export, recovery.</li>
+                <li>Word import/automation, working copies, save verification, recovery snapshots.</li>
+                <li>File-hash verification for transfers and exports.</li>
+                <li>Windows Voice Access integration for speech-to-text (not a custom speech model).</li>
+                <li>PowerShell integration for approved machine-level changes and restoration.</li>
+              </ul>
+              <h4>Scope boundaries</h4>
+              <p>
+                Focus assistance — not a secure browser, tamper-proof exam system, or complete OS lockdown solution.
+                No confidential student data, exam content, or internal procedures are published here.
+              </p>
+            </div>
+          </details>
         </article>
 
         <!-- SFGC -->
         <article class="project-card featured" id="project-sfgc">
+          <div class="featured-main">
           <img class="project-thumb" src="assets/images/projects/sfgc-internal.png" width="800" height="500" alt="SFGC integrated internal dashboard — overview tab">
           <div class="project-body">
             <p class="project-org">Success for Geneva's Children</p>
@@ -182,36 +187,37 @@
               <span class="tag">ggplot2</span>
               <span class="tag">Neon Postgres</span>
             </div>
-            <details class="case-study">
-              <summary>Case study</summary>
-              <div class="case-study-inner">
-                <h4>Problem</h4>
-                <p>
-                  Community reporting drew from state portals, Census data, schools, and local partners. Repeated manual
-                  collection made updates, backups, and source tracing difficult for staff maintaining ten community goals.
-                </p>
-                <h4>Solution</h4>
-                <p>
-                  Built an integrated internal dashboard that unifies stewardship, exploration, and pipeline visibility in
-                  one bslib-themed Shiny application, with authenticated roles (viewer, editor, administrator) and a central
-                  dataset registry.
-                </p>
-                <h4>Implementation</h4>
-                <ul>
-                  <li><strong>Overview</strong> — goal sidebar, dataset cards per community goal, and an in-app dataset editor (update, view, backup, restore).</li>
-                  <li><strong>Explore (Report Mode)</strong> — plot builder with goal/dataset filters, exports, captions, and a filtered data table aligned to each chart.</li>
-                  <li><strong>System &amp; Diagnostics</strong> — health stats, dataset catalog (including archive/restore), activity log, and administrator user management.</li>
-                  <li><strong>Data layer</strong> — Neon Postgres registry, automated fetcher registry integration, and pipeline tooling for refresh and attribution metadata.</li>
-                  <li><strong>In-app assistant</strong> — context-aware help grounded in dashboard structure and permissions.</li>
-                </ul>
-                <h4>Outcomes</h4>
-                <p>
-                  Staff can refresh indicators, trace sources, and produce report-ready visuals from one interface instead
-                  of ad hoc spreadsheets and disconnected files.
-                </p>
-              </div>
-            </details>
           </div>
+          </div>
+          <details class="case-study case-study--featured">
+            <summary>Case study</summary>
+            <div class="case-study-inner">
+              <h4>Problem</h4>
+              <p>
+                Community reporting drew from state portals, Census data, schools, and local partners. Repeated manual
+                collection made updates, backups, and source tracing difficult for staff maintaining ten community goals.
+              </p>
+              <h4>Solution</h4>
+              <p>
+                Built an integrated internal dashboard that unifies stewardship, exploration, and pipeline visibility in
+                one bslib-themed Shiny application, with authenticated roles (viewer, editor, administrator) and a central
+                dataset registry.
+              </p>
+              <h4>Implementation</h4>
+              <ul>
+                <li><strong>Overview</strong> — goal sidebar, dataset cards per community goal, and an in-app dataset editor (update, view, backup, restore).</li>
+                <li><strong>Explore (Report Mode)</strong> — plot builder with goal/dataset filters, exports, captions, and a filtered data table aligned to each chart.</li>
+                <li><strong>System &amp; Diagnostics</strong> — health stats, dataset catalog (including archive/restore), activity log, and administrator user management.</li>
+                <li><strong>Data layer</strong> — Neon Postgres registry, automated fetcher registry integration, and pipeline tooling for refresh and attribution metadata.</li>
+                <li><strong>In-app assistant</strong> — context-aware help grounded in dashboard structure and permissions.</li>
+              </ul>
+              <h4>Outcomes</h4>
+              <p>
+                Staff can refresh indicators, trace sources, and produce report-ready visuals from one interface instead
+                of ad hoc spreadsheets and disconnected files.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
 
@@ -293,10 +299,10 @@
           </p>
         </li>
         <li>
-          <h3>Software Engineer</h3>
-          <p class="meta">Success for Geneva's Children · February 2026–Present</p>
+          <h3>Software Engineer (Contract)</h3>
+          <p class="meta">Success for Geneva's Children · February 2026–July 2026</p>
           <p>
-            Built and maintain the integrated internal dashboard — goal overview, dataset editor, report-mode explorer,
+            Built the integrated internal dashboard — goal overview, dataset editor, report-mode explorer,
             system diagnostics, and Neon-backed registry with role-based access.
           </p>
         </li>
