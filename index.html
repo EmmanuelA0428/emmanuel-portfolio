@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Emmanuel Appiah — software engineer and data analytics professional building data pipelines, interactive dashboards, GIS tools, and software for nonprofits and community organizations.">
+  <meta name="description" content="Emmanuel Appiah — software engineer and data analyst building data pipelines, interactive dashboards, GIS tools, and software for nonprofits and community organizations.">
   <meta name="author" content="Emmanuel Appiah">
   <meta property="og:title" content="Emmanuel Appiah — Software Engineer &amp; Data Analytics">
   <meta property="og:description" content="Data engineering, environmental analytics, GIS, and interactive dashboards for community and nonprofit organizations.">
@@ -27,7 +27,6 @@
         <a href="#research">Research</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="#resume">Résumé</a>
       </nav>
       <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -39,14 +38,13 @@
       <a href="#research">Research</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="#resume">Résumé</a>
     </nav>
   </header>
 
   <main id="main">
     <header class="hero section">
       <h1>Emmanuel Appiah</h1>
-      <p class="title">Software Engineer &amp; Data Analytics Professional</p>
+      <p class="title">Software Engineer &amp; Data Analytics</p>
       <p class="availability">Available for contract opportunities</p>
       <p class="lede">
         I build data infrastructure, interactive dashboards, geospatial applications, and software solutions
@@ -59,8 +57,7 @@
     </header>
 
     <section class="section" id="projects" aria-labelledby="projects-heading">
-      <p class="section-label">Portfolio</p>
-      <h2 class="section-title" id="projects-heading">Selected Projects</h2>
+      <h2 class="section-title" id="projects-heading">Projects</h2>
       <p class="section-intro">
         End-to-end work across environmental monitoring, community data platforms, desktop software, and GIS.
       </p>
@@ -116,14 +113,14 @@
           </details>
         </article>
 
-        <!-- CTL TestDesk -->
-        <article class="project-card featured project-card--no-media" id="project-testdesk">
+        <!-- Accommodated testing -->
+        <article class="project-card featured project-card--no-media" id="project-accommodated-testing">
           <div class="project-body">
             <p class="project-org">Hobart and William Smith Colleges · Center for Teaching and Learning</p>
-            <h3><a href="#project-testdesk">CTL TestDesk — Accommodated Exam Management</a></h3>
+            <h3><a href="#project-accommodated-testing">Accommodated Exam Testing</a></h3>
             <p class="project-summary">
-              A Windows desktop application that unifies staff-managed accommodated exam preparation, document handling,
-              accessibility configuration, export, and recovery — replacing a fragile USB-and-Word workflow.
+              A Windows desktop application that unifies exam setup, accessibility tools, testing controls, and document
+              recovery into one guided workflow for accommodated testing laptops.
             </p>
             <div class="tags">
               <span class="tag">C#</span>
@@ -132,7 +129,7 @@
               <span class="tag">Word automation</span>
             </div>
             <p class="project-summary" style="margin-top:0.75rem;font-size:0.875rem;">
-              <strong>Status:</strong> Beta / pilot validation (documented release: CTL TestDesk Beta 4.5).
+              <strong>Status:</strong> Beta / pilot validation.
             </p>
           </div>
           <details class="case-study case-study--featured">
@@ -140,26 +137,50 @@
             <div class="case-study-inner">
               <h4>Problem</h4>
               <p>
-                Staff prepared accommodated exams via manual laptops: Word files from USB drives, Wi‑Fi disabled,
-                saves back to removable media, and clearing recent-document history between students.
+                Staff prepared testing laptops individually, moving exam documents from USB drives, disabling Wi‑Fi, saving
+                completed work, and clearing Word history between students. Existing helper tools handled isolated tasks,
+                but the overall process still depended on staff coordinating each step manually.
               </p>
+              <p>I focused on three challenges:</p>
+              <ul>
+                <li><strong>Accessibility:</strong> Students needed straightforward access to approved speech-to-text and text-to-speech tools within their exam workflow.</li>
+                <li><strong>Staff workload:</strong> Repeated setup, file handling, and reset tasks made preparing each laptop cumbersome.</li>
+                <li><strong>Testing controls:</strong> Staff needed a more consistent way to limit access to unrelated resources while keeping necessary accessibility tools available.</li>
+              </ul>
               <h4>Solution</h4>
               <p>
-                Desktop app with separated UI, session models, services, and configuration scripts. Primary workflow:
-                offline Word examinations; secondary workflow: online exams in Microsoft Edge (Canvas, Posit).
+                I developed a Windows desktop application that brings exam setup, accessibility tools, testing controls, and
+                document recovery into one guided workflow. It supports offline Microsoft Word exams as the primary use case,
+                alongside online exams in Microsoft Edge for Canvas and Posit.
               </p>
-              <h4>Implementation (documented architecture)</h4>
-              <ul>
-                <li>Session lifecycle: preparation, active testing, completion, staff review, verified export, recovery.</li>
-                <li>Word import/automation, working copies, save verification, recovery snapshots.</li>
-                <li>File-hash verification for transfers and exports.</li>
-                <li>Windows Voice Access integration for speech-to-text (not a custom speech model).</li>
-                <li>PowerShell integration for approved machine-level changes and restoration.</li>
-              </ul>
-              <h4>Scope boundaries</h4>
+              <h4>How I tackled each challenge</h4>
+              <p><strong>1. Put accessibility within reach</strong></p>
               <p>
-                Focus assistance — not a secure browser, tamper-proof exam system, or complete OS lockdown solution.
-                No confidential student data, exam content, or internal procedures are published here.
+                I brought Windows accessibility tools into the testing workflow: Windows Voice Access for dictation and Windows
+                speech synthesis for reading selected text aloud. Staff select the student’s approved supports during setup, and
+                student controls provide access during the exam.
+              </p>
+              <p><strong>2. Replace disconnected steps with a guided session</strong></p>
+              <p>
+                I organized each exam into a managed session — from preparation and document import through testing, staff review,
+                export, and restoration. Word automation handles document operations, while a privileged Windows background service
+                applies approved machine settings without requiring staff to repeatedly enter administrator credentials.
+              </p>
+              <p>
+                I also built safeguards around student work: automatic Word saves, rolling recovery copies, a verified Finish
+                checkpoint, and file-hash checks during export. Interrupted sessions enter a recovery workflow before another test
+                can begin.
+              </p>
+              <p><strong>3. Add testing controls without sacrificing accommodations</strong></p>
+              <p>
+                I integrated mode-specific controls for Wi‑Fi, USB storage, and browser access, alongside focus-return assistance and
+                staff-PIN handoff. Machine settings are recorded before changes so the application can restore the previous
+                configuration afterward.
+              </p>
+              <h4>Engineering and validation</h4>
+              <p>
+                Built with <strong>C#, WPF/XAML, Word COM automation, and PowerShell</strong>, with separate interface,
+                session-model, and service layers.
               </p>
             </div>
           </details>
@@ -282,7 +303,7 @@
 
     <section class="section" id="experience" aria-labelledby="experience-heading">
       <p class="section-label">Work</p>
-      <h2 class="section-title" id="experience-heading">Professional Experience</h2>
+      <h2 class="section-title" id="experience-heading">Experience</h2>
       <ol class="timeline">
         <li>
           <h3>Software Engineer (Contract)</h3>
@@ -304,7 +325,7 @@
           <h3>Technical Support Specialist</h3>
           <p class="meta">Hobart and William Smith Colleges · July 2026–Present</p>
           <p>
-            Institutional technical support; developed CTL TestDesk for accommodated exam management (beta/pilot).
+            Institutional technical support; developed accommodated exam testing software (beta/pilot).
           </p>
         </li>
       </ol>
@@ -367,7 +388,7 @@
       <div class="about-grid">
         <div>
           <p>
-            I am a software engineer and data analytics professional focused on practical systems for nonprofits,
+            I am a software engineer and data analyst focused on practical systems for nonprofits,
             universities, research groups, and community organizations — from ingestion and quality control through
             deployment and maintainable interfaces.
           </p>
@@ -388,23 +409,12 @@
       </div>
     </section>
 
-    <section class="section" id="resume" aria-labelledby="resume-heading">
-      <p class="section-label">Documents</p>
-      <h2 class="section-title" id="resume-heading">Résumé</h2>
-      <p class="resume-note">
-        PDF résumé is not bundled in this repository yet. For a current résumé, please
-        <a href="mailto:Emmanuela0428@gmail.com">email me</a> or connect on
-        <a href="https://www.linkedin.com/in/emmanuel-appiah0428" rel="noopener noreferrer">LinkedIn</a>.
-        <!-- When assets/documents/resume.pdf exists, add: <a class="btn btn-secondary" href="assets/documents/resume.pdf" download>Download résumé (PDF)</a> -->
-      </p>
-    </section>
-
     <section class="section" id="contact" aria-labelledby="contact-heading">
       <p class="section-label">Work together</p>
       <h2 class="section-title" id="contact-heading">Contact &amp; Contract Availability</h2>
       <p class="section-intro">
         I welcome inquiries from nonprofits, universities, research institutions, and environmental organizations
-        for remote, project-based contract work.
+        for project-based contract work.
       </p>
       <h3 style="font-size:1rem;margin:0 0 0.5rem;">Services</h3>
       <ul class="services-list">
@@ -426,7 +436,6 @@
 
   <footer class="site-footer">
     <span>© <span id="year">2026</span> Emmanuel Appiah</span>
-    <span>Portfolio · static site</span>
   </footer>
 
   <script src="js/main.js" defer></script>
